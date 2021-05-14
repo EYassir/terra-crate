@@ -1,0 +1,19 @@
+bootstrap:
+  memory_lock: true
+
+cluster:
+  name: crate-cluster
+  initial_master_nodes:
+  - vm1
+  - vm2
+#network.bind_host: 0.0.0.0
+network:
+  host: _site_
+discovery:
+  seed_hosts:
+    - x.x.x.x:4300
+    - x.x.x.x:4300
+
+gateway:
+  expected_nodes: 2
+  recover_after_nodes: 2
